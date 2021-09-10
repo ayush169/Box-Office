@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { useLocation } from "react-router";
 import { LinkStyled, NavList } from "./Nav.styled";
 
@@ -9,8 +9,6 @@ const LINKS = [
 
 const Nav = () => {
   const location = useLocation();
-
-  console.log("location", location);
 
   return (
     <div>
@@ -30,4 +28,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default memo(Nav);
